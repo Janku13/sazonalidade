@@ -91,7 +91,10 @@ export default function Encarte() {
               })
             }
           </Row>
-        </Col>    
+      </Col>  
+      <CustomCard doesHavePadding={true}>
+        <CustomTable/>
+      </CustomCard>
       </>
   )
 }
