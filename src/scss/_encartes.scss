@@ -13,3 +13,15 @@
   place-items: center;
   text-align: center;
 }
+.icon-action{
+  color: $icons-color;
+}
+.icon-text{
+  color: $icons-color;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+.icon-container{
+  display: flex;
+}
