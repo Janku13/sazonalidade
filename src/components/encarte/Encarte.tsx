@@ -15,8 +15,17 @@ import IconContainer from './encarteComponents/IconContainer';
 };
 
 export default function Encarte() {
- 
-  const iconsList: Icon[] = [
+  const produtosIcons: Icon[] = [
+    {
+      text: 'exportar em .csv',
+      icon: <HiUpload size={20} className="icon-action"/> 
+    },
+    {
+      text: 'exportar em .pdf',
+      icon: <HiUpload size={20} className="icon-action"/> 
+    },
+  ]
+  const sazonalidadeIconsList: Icon[] = [
     {
       text: 'editar',
       icon:<TbEdit size={20} className="icon-action"/>
@@ -53,11 +62,10 @@ export default function Encarte() {
       <h6 className="mt-5">
         ENCARTES POR SAZONALIDADE
       </h6>
-      <Row>
         <Col lg={6}>
           <Row>
             {
-              iconsList.map((item) => {
+              sazonalidadeIconsList.map((item) => {
                 return (
                   <IconContainer text={item.text} icon={item.icon} />
                 )
@@ -65,10 +73,23 @@ export default function Encarte() {
             }
           </Row>
         </Col>
-        <Col>
-        </Col>
-       
-      </Row>
+      
+      <h6 className="mt-5">
+        LIST DE PRODUTOS
+        SAZONALIDADE - ARRAIÁ
+      </h6>
+        <Col lg={6}>
+          <Row>
+            {
+              produtosIcons.map((item) => {
+                return (
+                  <IconContainer text={item.text} icon={item.icon} />
+                )
+              })
+            }
+          </Row>
+        </Col>    
+  
       </>
   )
 }
