@@ -74,7 +74,7 @@ export default function Encarte() {
           }
         </Row>
       </Col>
-      <CustomCard doesHavePadding={false}>
+      <CustomCard doesHavePadding={true}>
         <CustomTable/>
       </CustomCard>
       <h6 className="mt-5">
