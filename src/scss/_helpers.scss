@@ -6,6 +6,11 @@
   display: grid;
   place-items: center;
 }
+.show-curser{
+  &:hover {
+    cursor: pointer;
+  }
+}
 .overflow {
   background-color: $bg-main;
   margin-top: -16px;

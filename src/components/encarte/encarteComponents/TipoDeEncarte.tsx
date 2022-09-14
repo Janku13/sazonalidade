@@ -8,7 +8,7 @@ export default function TipoDeEncarte() {
       <Row>
         {encarteItems.map((item) => {
           return <Col
-             className={choosenEncarte === item ? 'overflow center-item' :''}
+             className={choosenEncarte === item ? 'overflow center-item show-curser' :'show-curser'}
             onClick={() => setChoosenEncarte(item)}>
             <div  className='encart-item-container'>
               {item}
