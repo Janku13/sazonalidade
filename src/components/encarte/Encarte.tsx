@@ -7,6 +7,7 @@ import CustomButton from "../customButton/CustomButton";
 import CustomCard from "../customCard/CustomCard";
 import TipoDeEncarte from "./encarteComponents/TipoDeEncarte";
 import IconContainer from './encarteComponents/IconContainer';
+import CustomTable from '../customTable/CustomTable';
 
  export type Icon = {
   text: string;
@@ -62,18 +63,20 @@ export default function Encarte() {
       <h6 className="mt-5">
         ENCARTES POR SAZONALIDADE
       </h6>
-        <Col lg={6}>
-          <Row>
-            {
-              sazonalidadeIconsList.map((item) => {
+      <Col lg={6}>
+        <Row>
+          {
+            sazonalidadeIconsList.map((item) => {
                 return (
                   <IconContainer text={item.text} icon={item.icon} />
                 )
-              })
-            }
-          </Row>
-        </Col>
-      
+            })
+          }
+        </Row>
+      </Col>
+      <CustomCard doesHavePadding={false}>
+        <CustomTable/>
+      </CustomCard>
       <h6 className="mt-5">
         LIST DE PRODUTOS
         SAZONALIDADE - ARRAIÁ
@@ -89,7 +92,6 @@ export default function Encarte() {
             }
           </Row>
         </Col>    
-  
       </>
   )
 }
